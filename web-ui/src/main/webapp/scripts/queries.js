@@ -15,19 +15,19 @@
 var exampleQueries = [
 
     {
-        shortname : "Query 1",
-        description: "People who were born in Berlin before 1900",
-        query: "PREFIX : <http://dbpedia.org/resource/>\n" +
-            "PREFIX dbo: <http://dbpedia.org/ontology/>\n\n" +
-            "SELECT ?name ?birth ?death ?person WHERE {\n" +
-            "?person dbo:birthPlace :Berlin .\n" +
-            "?person dbo:birthDate ?birth .\n" +
-            "?person foaf:name ?name .\n" +
-            "?person dbo:deathDate ?death .\n" +
-            "FILTER (?birth < \"1900-01-01\"^^xsd:date) . \n" +
-            "}   \n" +
-            "ORDER BY ?name"
+        shortname : "Ipsapirone",
+        description: "Returns information about the ligand Ipsaprione (ligand42)",
+        query: "PREFIX gtp: <http://rdf.guidetopharmacology.org/GRAC/>\n\n" +
+          "SELECT ?name ?iupacName ?approved ?cSMILES ?iSMILES ?inchikey ?inchi\n" +
+          "WHERE {\n" +
+          "gtp:ligand42 gtpo:ligandName ?name;\n" +
+          "gtpo:iupacName ?iupacName;\n" +
+          "gtpo:approved ?approved;\n" +
+          "gtpo:canonicalSMILES ?cSMILES;\n" +
+          "gtpo:isomericSMILES ?iSMILES;\n"+
+          "gtpo:inChIKey ?inchikey;\n"+
+          "gtpo:inChI ?inchi.\n" +
+          "}"
     }
 
 ]
-

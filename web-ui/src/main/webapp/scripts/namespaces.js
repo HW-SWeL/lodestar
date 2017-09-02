@@ -17,10 +17,5 @@ var lodeNamespacePrefixes = {
     xsd: 'http://www.w3.org/2001/XMLSchema#',
     dc: 'http://purl.org/dc/elements/1.1/',
     dcterms: 'http://purl.org/dc/terms/',
-    dbpedia2: 'http://dbpedia.org/property/',
-    dbpedia: 'http://dbpedia.org/',
-    foaf: 'http://xmlns.com/foaf/0.1/',
-    skos: 'http://www.w3.org/2004/02/skos/core#'
-
+    gtpo: 'http://rdf.guidetopharmacology.org/ns/gtpo/'
 };
-
