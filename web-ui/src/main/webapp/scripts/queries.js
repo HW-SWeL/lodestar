@@ -28,6 +28,22 @@ var exampleQueries = [
           "gtpo:inChIKey ?inchikey;\n"+
           "gtpo:inChI ?inchi.\n" +
           "}"
+    },
+    {
+        shortname : "Ligand Information",
+        description: "Returns information about ligands",
+        query: "PREFIX gtp: <http://rdf.guidetopharmacology.org/GRAC/>\n\n" +
+          "SELECT ?ligand ?name ?iupacName ?approved ?cSMILES ?iSMILES ?inchikey ?inchi\n" +
+          "WHERE {\n" +
+          "?ligand gtpo:ligandName ?name;\n" +
+          "gtpo:iupacName ?iupacName;\n" +
+          "gtpo:approved ?approved;\n" +
+          "gtpo:canonicalSMILES ?cSMILES;\n" +
+          "gtpo:isomericSMILES ?iSMILES;\n"+
+          "gtpo:inChIKey ?inchikey;\n"+
+          "gtpo:inChI ?inchi.\n" +
+          "}"
     }
+
 
 ]
